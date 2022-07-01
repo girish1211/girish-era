@@ -16,7 +16,7 @@
 
   tasks:
 
-  -shell: hostname >> hostname.txt
+- shell: hostname >> hostname.txt
     - name: Print messages_2
       debug:
         msg: "{{URL}}"
