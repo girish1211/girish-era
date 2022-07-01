@@ -1,19 +1,22 @@
 - name: Playbook2
   hosts: localhost
   # vars:
-  #   URL: Global
+  #   URL: Global.cloudblitz.in
 
-  # vars_files: data.yml
+  # vars_files: url.yml
 
   vars_prompt:
     - name: URL
-      prompt: "Enter Anything"
+      prompt: "Enter URL"
       private: no
       # private for URL hidden
 
   tasks:
+
+  -shell: hostname > hostname.txt
     - name: Print messages_2
       debug:
         msg: "{{URL}}"
       # vars:
       #   URL: Local_url
+      
