@@ -1,7 +1,8 @@
 - name: Playbook1
   hosts: localhost
-  vars_files: girish.yml 
+  vars:
     URL: cloudblitz.in
+    vars_files: URL.yml
   tasks:
   - name: Print messages_1
     debug:
