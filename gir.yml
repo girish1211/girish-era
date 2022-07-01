@@ -1,4 +1,3 @@
-URL: this is the page
 - name: Playbook2
   hosts: localhost
   # vars:
