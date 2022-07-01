@@ -1,4 +1,4 @@
-- name: Playbook2
+- name: Playbook1
   hosts: localhost
   # vars:
   #   URL: Global.cloudblitz.in
@@ -14,7 +14,7 @@
   tasks:
 
 - shell: hostname >> hostname.txt
-    - name: Print messages_2
+- name: Print messages_1
       debug:
         msg: "{{URL}}"
       # vars:
