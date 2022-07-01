@@ -7,6 +7,4 @@
     debug:
       msg: "{{URL}}"
 
-  - name: Print messages_2
-    debug:
-      msg: "{{URL}}"
+
