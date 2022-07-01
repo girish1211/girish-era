@@ -1,19 +1,24 @@
 35.159.18.142
 35.159.18.142
 URL: this is the page
-- name: Playbook1
+- name: Playbook2
   hosts: localhost
+  # vars:
+  #   URL: Global.cloudblitz.in
+
   # vars_files: url.yml
-  # vars: 
-  #   URL: cloudblitz.in
+
+  vars_prompt:
+    - name: URL
+      prompt: "Enter URL"
+      private: no
+      # private for URL hidden
+
   tasks:
 
-  - name: Print messages_1
-    debug:
-      msg: "{{URL}}"
-
-  # - name: Print messages_2
-  #   debug:
-  #     msg: "{{URL}}"    
-  #   vars:
-  #     URL: cloudblitz.in/aws
+  -shell: hostname >> hostname.txt
+    - name: Print messages_2
+      debug:
+        msg: "{{URL}}"
+      # vars:
+      #   URL: Local_url
