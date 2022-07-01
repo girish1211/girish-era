@@ -5,17 +5,16 @@
 
   # vars_files: url.yml
 
-  vars_prompt:
-    - name: URL
-      prompt: "Enter URL"
-      private: no
-      # private for URL hidden
+  #vars_prompt:
+  #- name: URL
+  #     prompt: "Enter URL"
+  #     private: no
+  #     # private for URL hidden
 
   tasks:
-
-- shell: hostname >> hostname.txt
-- name: Print messages_1
+    - shell: hostname >> hostname.txt
+    - name: Print messages_1
       debug:
-        msg: "{{URL}}"
+        msg: "welcome"
       # vars:
       #   URL: Local_url
