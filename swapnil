@@ -6,9 +6,9 @@
 
   # vars_files: url.yml
 
-  # vars_prompt:
-  # - name: URL
-  #   prompt: "ENTER URL"   
+   vars_prompt:
+  # name: URL
+     prompt: "ENTER URL"   
   #   private: no
 
   tasks:
